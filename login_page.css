@@ -1,7 +1,7 @@
 
-/* =========================
+/* =========================================
    1. GLOBAL STYLES
-========================= */
+========================================= */
 
 * {
     margin: 0;
@@ -10,19 +10,30 @@
     font-family: Arial, sans-serif;
 }
 
+:root {
+    --bg-color: #F3F8FF;
+    --surface-color: #FFFFFF;
+    --soft-blue: #DCEBFA;
+    --primary-blue: #6BA5DF;
+    --dark-blue: #24558A;
+    --orange: #FFAD66;
+    --text-color: #26384B;
+    --muted-color: #718096;
+    --border-color: #DCE6F0;
+}
+
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #74b9ff, #a29bfe);
-
+    background: linear-gradient(135deg, #F3F8FF, #DCEBFA);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-/* =========================
+/* =========================================
    2. LOGIN CONTAINER
-========================= */
+========================================= */
 
 .login-container {
     width: 100%;
@@ -34,17 +45,15 @@ body {
     max-width: 400px;
     margin: auto;
     padding: 40px 35px;
-
-    background: #ffffff;
+    background: var(--surface-color);
     border-radius: 15px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid var(--orange);
+    box-shadow: 0 10px 30px rgba(36, 85, 138, 0.12);
 }
 
-
-/* =========================
+/* =========================================
    3. LOGIN HEADER
-========================= */
+========================================= */
 
 .login-header {
     text-align: center;
@@ -52,19 +61,18 @@ body {
 }
 
 .login-header h1 {
-    color: #2d3436;
+    color: var(--dark-blue);
     margin-bottom: 10px;
 }
 
 .login-header p {
-    color: #777777;
+    color: var(--muted-color);
     font-size: 14px;
 }
 
-
-/* =========================
+/* =========================================
    4. FORM INPUTS
-========================= */
+========================================= */
 
 .form-group {
     margin-bottom: 20px;
@@ -73,8 +81,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-
-    color: #333333;
+    color: var(--text-color);
     font-weight: bold;
     font-size: 14px;
 }
@@ -82,82 +89,81 @@ body {
 .form-group input {
     width: 100%;
     padding: 13px;
-
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border-color);
     border-radius: 7px;
     outline: none;
-
+    background: #FFFFFF;
+    color: var(--text-color);
     font-size: 14px;
     transition: 0.3s;
 }
 
 .form-group input:focus {
-    border-color: #6c5ce7;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(107, 165, 223, 0.15);
 }
 
+.form-group input::placeholder {
+    color: #A0AEC0;
+}
 
-/* =========================
+/* =========================================
    5. FORM OPTIONS
-========================= */
+========================================= */
 
 .form-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 25px;
     font-size: 13px;
+    color: var(--muted-color);
 }
 
 .form-options a,
 .login-footer a {
-    color: #6c5ce7;
+    color: var(--dark-blue);
     text-decoration: none;
+    font-weight: 600;
 }
 
 .form-options a:hover,
 .login-footer a:hover {
+    color: #183F6B;
     text-decoration: underline;
 }
 
-
-/* =========================
+/* =========================================
    6. LOGIN BUTTON
-========================= */
+========================================= */
 
 .login-button {
     width: 100%;
     padding: 13px;
-
-    background: #6c5ce7;
-    color: #ffffff;
-
+    background: var(--dark-blue);
+    color: #FFFFFF;
     border: none;
     border-radius: 7px;
-
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 .login-button:hover {
-    background: #5645c0;
+    background: #183F6B;
+    transform: translateY(-2px);
 }
 
-
-/* =========================
+/* =========================================
    7. FEEDBACK MESSAGE
-========================= */
+========================================= */
 
 #message {
     margin-top: 15px;
     text-align: center;
     font-size: 14px;
 }
-
-/* SUCCESS AND ERROR MESSAGE */
 
 .message {
     margin-top: 15px;
@@ -170,35 +176,32 @@ body {
 
 .message.success {
     display: block;
-    background: #d4edda;
-    color: #155724;
+    background: #E4F5EA;
+    color: #276749;
 }
 
 .message.error {
     display: block;
-    background: #f8d7da;
-    color: #721c24;
+    background: #FDECEC;
+    color: #B83232;
 }
 
-/* =========================
+/* =========================================
    8. LOGIN FOOTER
-========================= */
+========================================= */
 
 .login-footer {
     margin-top: 25px;
     text-align: center;
-
-    color: #666666;
+    color: var(--muted-color);
     font-size: 14px;
 }
 
-
-/* =========================
+/* =========================================
    9. RESPONSIVE DESIGN
-========================= */
+========================================= */
 
 @media (max-width: 480px) {
-
     .login-box {
         padding: 30px 20px;
     }
@@ -206,5 +209,4 @@ body {
     .form-options {
         font-size: 12px;
     }
-
 }

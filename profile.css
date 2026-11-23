@@ -1,7 +1,7 @@
 
-/* =========================
+/* =========================================
    1. GLOBAL STYLES
-========================= */
+========================================= */
 
 * {
     margin: 0;
@@ -10,44 +10,57 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    background: #f4f6fb;
-    color: #2d3436;
+:root {
+    --bg-color: #F3F8FF;
+    --surface-color: #FFFFFF;
+    --soft-blue: #DCEBFA;
+    --primary-blue: #6BA5DF;
+    --dark-blue: #24558A;
+    --orange: #FFAD66;
+    --text-color: #26384B;
+    --muted-color: #718096;
+    --border-color: #DCE6F0;
 }
 
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
 
-/* =========================
+/* =========================================
    2. NAVIGATION
-========================= */
+========================================= */
 
 .profile-navbar {
-    background: #ffffff;
+    background: var(--surface-color);
     padding: 20px 7%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(36, 85, 138, 0.06);
 }
 
 .logo {
-    color: #6c5ce7;
+    color: var(--dark-blue);
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .back-link {
-    color: #6c5ce7;
+    color: var(--dark-blue);
     text-decoration: none;
+    transition: 0.3s;
 }
 
+.back-link:hover {
+    color: var(--primary-blue);
+}
 
-/* =========================
+/* =========================================
    3. PROFILE CONTAINER
-========================= */
+========================================= */
 
 .profile-container {
     min-height: calc(100vh - 70px);
@@ -57,46 +70,41 @@ body {
     padding: 30px 20px;
 }
 
-
-/* =========================
+/* =========================================
    4. PROFILE CARD
-========================= */
+========================================= */
 
 .profile-card {
     width: 100%;
     max-width: 600px;
-
     padding: 35px;
-    background: #ffffff;
-
+    background: var(--surface-color);
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-top: 5px solid var(--orange);
+    box-shadow: 0 8px 25px rgba(36, 85, 138, 0.08);
 }
 
-
-/* =========================
+/* =========================================
    5. PROFILE HEADING
-========================= */
+========================================= */
 
 .profile-heading {
     text-align: center;
     padding-bottom: 25px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .profile-avatar {
     width: 90px;
     height: 90px;
-
     margin: 0 auto 15px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: #6c5ce7;
-    color: #ffffff;
-
+    background: var(--dark-blue);
+    color: #FFFFFF;
+    border: 4px solid var(--soft-blue);
+    border-bottom-color: var(--orange);
     border-radius: 50%;
     font-size: 35px;
     font-weight: bold;
@@ -104,28 +112,26 @@ body {
 
 .profile-heading h1 {
     margin-bottom: 7px;
+    color: var(--dark-blue);
 }
 
 .profile-heading p {
-    color: #888888;
+    color: var(--muted-color);
     margin-bottom: 12px;
 }
 
 .account-status {
     display: inline-block;
     padding: 7px 15px;
-
-    background: #d4edda;
-    color: #155724;
-
+    background: #E4F5EA;
+    color: #276749;
     border-radius: 20px;
     font-size: 12px;
 }
 
-
-/* =========================
+/* =========================================
    6. PERSONAL INFORMATION
-========================= */
+========================================= */
 
 .profile-information {
     padding: 25px 0;
@@ -134,6 +140,7 @@ body {
 .profile-information h2 {
     font-size: 19px;
     margin-bottom: 20px;
+    color: var(--dark-blue);
 }
 
 .info-group {
@@ -142,59 +149,67 @@ body {
 
 .info-group label {
     display: block;
-    color: #888888;
+    color: var(--muted-color);
     font-size: 13px;
     margin-bottom: 7px;
 }
 
 .info-group p {
     font-weight: bold;
+    color: var(--text-color);
     overflow-wrap: anywhere;
 }
 
-
-/* =========================
+/* =========================================
    7. PROFILE ACTIONS
-========================= */
+========================================= */
 
 .profile-actions {
     display: flex;
     gap: 12px;
     padding-top: 20px;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid var(--border-color);
 }
 
 .home-button,
 .logout-button {
     flex: 1;
     padding: 13px;
-
     border: none;
     border-radius: 7px;
-
     text-align: center;
     text-decoration: none;
-
     font-size: 14px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .home-button {
-    background: #6c5ce7;
-    color: #ffffff;
+    background: var(--dark-blue);
+    color: #FFFFFF;
+}
+
+.home-button:hover {
+    background: #183F6B;
 }
 
 .logout-button {
-    background: #fff0f0;
-    color: #e74c3c;
+    background: #FFF0E5;
+    color: #C66B2E;
 }
 
+.logout-button:hover {
+    background: #FFE0C9;
+}
 
-/* =========================
+/* =========================================
    8. RESPONSIVE DESIGN
-========================= */
+========================================= */
 
 @media (max-width: 480px) {
+    .profile-navbar {
+        padding: 15px 5%;
+    }
 
     .profile-card {
         padding: 25px 20px;
@@ -203,5 +218,4 @@ body {
     .profile-actions {
         flex-direction: column;
     }
-
 }

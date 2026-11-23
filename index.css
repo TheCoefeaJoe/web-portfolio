@@ -1,6 +1,7 @@
-/* =========================
+
+/* =========================================
    1. GLOBAL STYLES
-========================= */
+========================================= */
 
 * {
     margin: 0;
@@ -10,9 +11,21 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --bg-color: #F3F8FF;
+    --surface-color: #FFFFFF;
+    --soft-blue: #DCEBFA;
+    --primary-blue: #6BA5DF;
+    --dark-blue: #24558A;
+    --orange: #FFAD66;
+    --text-color: #26384B;
+    --muted-color: #718096;
+    --border-color: #DCE6F0;
+}
+
 body {
-    background: #f8f9ff;
-    color: #2d3436;
+    background: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -20,32 +33,32 @@ a {
     text-decoration: none;
 }
 
-/* =========================
+/* =========================================
    2. HEADER AND NAVIGATION
-========================= */
+========================================= */
 
 .header {
     width: 100%;
     min-height: 75px;
     padding: 15px 8%;
-    background: #ffffff;
+    background: var(--surface-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(36, 85, 138, 0.06);
 }
 
 .logo {
     font-size: 25px;
     font-weight: bold;
-    color: #2d3436;
+    color: var(--dark-blue);
 }
 
 .logo span {
-    color: #6c5ce7;
+    color: var(--orange);
 }
 
 .navbar {
@@ -55,19 +68,19 @@ a {
 }
 
 .nav-link {
-    color: #555;
+    color: var(--muted-color);
     font-size: 14px;
     transition: 0.3s;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #6c5ce7;
+    color: var(--dark-blue);
 }
 
 .login-link {
-    background: #6c5ce7;
-    color: #ffffff;
+    background: var(--dark-blue);
+    color: white;
     padding: 10px 20px;
     border-radius: 7px;
     font-size: 14px;
@@ -75,7 +88,7 @@ a {
 }
 
 .login-link:hover {
-    background: #5546c7;
+    background: #183F6B;
 }
 
 .login-link[hidden] {
@@ -86,13 +99,14 @@ a {
     display: none;
     background: none;
     border: none;
+    color: var(--dark-blue);
     font-size: 26px;
     cursor: pointer;
 }
 
-/* =========================
+/* =========================================
    3. HERO SECTION
-========================= */
+========================================= */
 
 .hero {
     min-height: 570px;
@@ -101,7 +115,11 @@ a {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 50px;
-    background: linear-gradient(120deg, #f8f9ff, #eeeaff);
+    background: linear-gradient(
+        120deg,
+        #F3F8FF,
+        #DCEBFA
+    );
     overflow: hidden;
 }
 
@@ -110,7 +128,7 @@ a {
 }
 
 .eyebrow {
-    color: #6c5ce7;
+    color: var(--dark-blue);
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -125,11 +143,11 @@ a {
 
 .hero h1 span,
 .section-heading h2 span {
-    color: #6c5ce7;
+    color: var(--primary-blue);
 }
 
 .hero-description {
-    color: #777;
+    color: var(--muted-color);
     max-width: 500px;
     margin-bottom: 30px;
 }
@@ -139,6 +157,8 @@ a {
     gap: 15px;
     flex-wrap: wrap;
 }
+
+/* Hero Buttons */
 
 .primary-btn,
 .secondary-btn {
@@ -151,25 +171,25 @@ a {
 }
 
 .primary-btn {
-    background: #6c5ce7;
+    background: var(--dark-blue);
     color: white;
 }
 
 .primary-btn:hover {
-    background: #5546c7;
+    background: #183F6B;
     transform: translateY(-3px);
 }
 
 .secondary-btn {
-    border: 1px solid #6c5ce7;
-    color: #6c5ce7;
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
 }
 
 .secondary-btn:hover {
-    background: #eeeaff;
+    background: var(--soft-blue);
 }
 
-/* Hero visual */
+/* Hero Visual */
 
 .hero-visual {
     min-height: 350px;
@@ -181,9 +201,9 @@ a {
 .visual-card {
     width: min(100%, 340px);
     padding: 40px 30px;
-    background: white;
+    background: var(--surface-color);
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(108, 92, 231, 0.15);
+    box-shadow: 0 20px 50px rgba(36, 85, 138, 0.12);
     position: relative;
     z-index: 2;
     text-align: center;
@@ -196,8 +216,9 @@ a {
     display: grid;
     place-items: center;
     border-radius: 20px;
-    background: #eeeaff;
-    color: #6c5ce7;
+    background: var(--soft-blue);
+    color: var(--dark-blue);
+    border-bottom: 4px solid var(--orange);
     font-size: 38px;
 }
 
@@ -206,7 +227,7 @@ a {
 }
 
 .visual-card p {
-    color: #888;
+    color: var(--muted-color);
 }
 
 .visual-line {
@@ -214,7 +235,7 @@ a {
     width: 85%;
     margin: 25px auto 10px;
     border-radius: 10px;
-    background: #eeeaff;
+    background: var(--soft-blue);
 }
 
 .visual-line.short {
@@ -225,7 +246,7 @@ a {
 .decor {
     position: absolute;
     border-radius: 50%;
-    background: rgba(108, 92, 231, 0.13);
+    background: rgba(107, 165, 223, 0.20);
 }
 
 .decor-one {
@@ -240,11 +261,12 @@ a {
     height: 100px;
     bottom: 10px;
     left: 5px;
+    background: rgba(255, 173, 102, 0.25);
 }
 
-/* =========================
+/* =========================================
    4. GENERAL SECTIONS
-========================= */
+========================================= */
 
 .section {
     padding: 85px 8%;
@@ -262,15 +284,15 @@ a {
 }
 
 .section-heading > p:last-child {
-    color: #777;
+    color: var(--muted-color);
 }
 
-/* =========================
+/* =========================================
    5. ABOUT SECTION
-========================= */
+========================================= */
 
 .about {
-    background: white;
+    background: var(--surface-color);
 }
 
 .about-content {
@@ -283,9 +305,10 @@ a {
 
 .about-box {
     padding: 30px;
-    background: #f8f7ff;
+    background: #F7FAFF;
     border-radius: 13px;
-    border: 1px solid #eeeaff;
+    border: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--primary-blue);
 }
 
 .about-icon {
@@ -293,9 +316,10 @@ a {
     height: 50px;
     display: grid;
     place-items: center;
-    background: #eeeaff;
-    color: #6c5ce7;
+    background: var(--soft-blue);
+    color: var(--dark-blue);
     border-radius: 12px;
+    border-bottom: 3px solid var(--orange);
     font-size: 25px;
     margin-bottom: 18px;
 }
@@ -305,15 +329,15 @@ a {
 }
 
 .about-box p {
-    color: #777;
+    color: var(--muted-color);
 }
 
-/* =========================
+/* =========================================
    6. SERVICES SECTION
-========================= */
+========================================= */
 
 .services {
-    background: #f8f9ff;
+    background: var(--bg-color);
 }
 
 .service-grid {
@@ -324,15 +348,17 @@ a {
 
 .service-card {
     padding: 30px 25px;
-    background: white;
+    background: var(--surface-color);
     border-radius: 13px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(36, 85, 138, 0.06);
     transition: 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(108, 92, 231, 0.10);
+    border-bottom: 3px solid var(--orange);
+    box-shadow: 0 12px 25px rgba(36, 85, 138, 0.12);
 }
 
 .service-icon {
@@ -340,9 +366,10 @@ a {
     height: 55px;
     display: grid;
     place-items: center;
-    background: #eeeaff;
-    color: #6c5ce7;
+    background: var(--soft-blue);
+    color: var(--dark-blue);
     border-radius: 12px;
+    border-bottom: 3px solid var(--orange);
     font-size: 27px;
     margin-bottom: 20px;
 }
@@ -352,15 +379,15 @@ a {
 }
 
 .service-card p {
-    color: #777;
+    color: var(--muted-color);
 }
 
-/* =========================
+/* =========================================
    7. CONTACT SECTION
-========================= */
+========================================= */
 
 .contact {
-    background: #eeeaff;
+    background: var(--soft-blue);
     text-align: center;
 }
 
@@ -372,28 +399,29 @@ a {
 .contact h2 {
     font-size: 35px;
     margin-bottom: 15px;
+    color: var(--dark-blue);
 }
 
 .contact-content > p:not(.eyebrow) {
-    color: #777;
+    color: var(--muted-color);
     margin-bottom: 25px;
 }
 
-/* =========================
+/* =========================================
    8. FOOTER
-========================= */
+========================================= */
 
 .footer {
     padding: 23px 8%;
-    background: #29263d;
-    color: #ffffff;
+    background: var(--dark-blue);
+    color: white;
     text-align: center;
     font-size: 13px;
 }
 
-/* =========================
+/* =========================================
    9. RESPONSIVE DESIGN
-========================= */
+========================================= */
 
 @media (max-width: 850px) {
     .header {
@@ -440,11 +468,11 @@ a {
         left: 0;
         width: 100%;
         padding: 20px;
-        background: white;
+        background: var(--surface-color);
         flex-direction: column;
         align-items: stretch;
         gap: 18px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 8px 15px rgba(36, 85, 138, 0.08);
     }
 
     .navbar.show {
