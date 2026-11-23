@@ -1,0 +1,119 @@
+/* Colors */
+:root {
+    --bg-primary: #F8FAFF;
+    --bg-secondary: #EDE9FE;
+    --bg-accent: #C7D2FE;
+
+    --primary: #7C3AED;
+    --secondary: #38BDF8;
+
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+
+    --gradient: linear-gradient(
+        135deg,
+        #7C3AED,
+        #38BDF8
+    );
+
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+}
+
+/* Navigation bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: var(--bg-primary);
+}
+
+.navbar h2 {
+    font-size: 28px;
+}
+
+.navbar h2 span {
+    color: var(--accent-purple);
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-cyan);
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(139,92,246,0.18),
+            transparent 35%
+        ),
+        var(--bg-primary);
+}
+
+.tagline {
+    color: var(--accent-cyan);
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    color: var(--text-secondary);
+    max-width: 500px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: var(--gradient-main);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glow-purple);
+}
