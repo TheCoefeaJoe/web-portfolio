@@ -1,0 +1,183 @@
+
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   2. REGISTER CONTAINER
+========================= */
+
+.register-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.register-box {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+    padding: 35px;
+
+    background: #ffffff;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   3. REGISTER HEADER
+========================= */
+
+.register-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.register-header h1 {
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.register-header p {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   4. FORM INPUTS
+========================= */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #333333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    outline: none;
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #6c5ce7;
+}
+
+
+/* =========================
+   5. TERMS AND CONDITIONS
+========================= */
+
+.form-options {
+    margin: 20px 0;
+    font-size: 13px;
+    color: #555555;
+}
+
+.form-options input {
+    margin-right: 5px;
+}
+
+
+/* =========================
+   6. REGISTER BUTTON
+========================= */
+
+.register-button {
+    width: 100%;
+    padding: 13px;
+
+    background: #6c5ce7;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background: #5645c0;
+}
+
+
+/* =========================
+   7. FEEDBACK MESSAGE
+========================= */
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* =========================
+   8. REGISTER FOOTER
+========================= */
+
+.register-footer {
+    margin-top: 25px;
+    text-align: center;
+
+    color: #666666;
+    font-size: 14px;
+}
+
+.register-footer a {
+    color: #6c5ce7;
+    text-decoration: none;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   9. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 480px) {
+
+    .register-box {
+        padding: 25px 20px;
+    }
+
+}

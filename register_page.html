@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | My Website</title>
+
+    <link rel="stylesheet" href="register_page.css">
+</head>
+
+<body>
+
+    <main class="register-container">
+
+        <section class="register-box">
+
+            <!-- Header -->
+            <header class="register-header">
+                <h1>Create Account</h1>
+                <p>Sign up to get started.</p>
+            </header>
+
+            <!-- Registration Form -->
+            <form id="registerForm">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Create a username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="register-button">
+                    Create Account
+                </button>
+
+                <!-- Feedback -->
+                <p id="message"></p>
+
+            </form>
+
+            <!-- Login Link -->
+            <footer class="register-footer">
+                <p>
+                    Already have an account?
+                    <a href="login_page.html">Sign In</a>
+                </p>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="register_page.js"></script>
+
+</body>
+</html>

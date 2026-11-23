@@ -1,0 +1,210 @@
+
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   2. LOGIN CONTAINER
+========================= */
+
+.login-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 40px 35px;
+
+    background: #ffffff;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   3. LOGIN HEADER
+========================= */
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   4. FORM INPUTS
+========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #333333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    outline: none;
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #6c5ce7;
+}
+
+
+/* =========================
+   5. FORM OPTIONS
+========================= */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.form-options a,
+.login-footer a {
+    color: #6c5ce7;
+    text-decoration: none;
+}
+
+.form-options a:hover,
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   6. LOGIN BUTTON
+========================= */
+
+.login-button {
+    width: 100%;
+    padding: 13px;
+
+    background: #6c5ce7;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #5645c0;
+}
+
+
+/* =========================
+   7. FEEDBACK MESSAGE
+========================= */
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* SUCCESS AND ERROR MESSAGE */
+
+.message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+}
+
+.message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* =========================
+   8. LOGIN FOOTER
+========================= */
+
+.login-footer {
+    margin-top: 25px;
+    text-align: center;
+
+    color: #666666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   9. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 480px) {
+
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .form-options {
+        font-size: 12px;
+    }
+
+}

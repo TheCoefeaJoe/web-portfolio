@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =====================================
+         1. PAGE SETTINGS
+    ====================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- EDIT: Website Browser Title -->
+    <title>MyWebsite | Welcome</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         2. HEADER / WEBSITE NAVIGATION
+    ====================================== -->
+    <header class="header">
+
+        <!-- EDIT: Website Logo / Name -->
+        <a href="#home" class="logo">
+            MyWebsite<span>.</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <!-- Navigation Links -->
+        <nav class="navbar" id="navbar">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <!-- Account Navigation -->
+            <a href="login_page.html" id="loginLink" class="login-link">
+                Sign In
+            </a>
+
+            <a href="profile.html" id="profileLink" class="login-link" hidden>
+                My Profile
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- =====================================
+         3. MAIN WEBSITE CONTENT
+    ====================================== -->
+    <main>
+
+        <!-- =====================================
+             3.1 HERO SECTION / HOMEPAGE BANNER
+        ====================================== -->
+        <section class="hero" id="home">
+
+            <!-- HERO TEXT CONTENT -->
+            <div class="hero-content">
+
+                <!-- EDIT: Small Introduction Text -->
+                <p class="eyebrow">WELCOME TO MYWEBSITE</p>
+
+                <!-- EDIT: Main Website Heading -->
+                <h1>
+                    Discover a Better Way to
+                    <span>Connect.</span>
+                </h1>
+
+                <!-- EDIT: Website Description -->
+                <p class="hero-description">
+                    Explore our website and discover services and information
+                    designed to make your experience simple and convenient.
+                </p>
+
+                <!-- HERO BUTTONS -->
+                <div class="hero-buttons">
+
+                    <a href="#about" class="primary-btn">
+                        Explore More
+                    </a>
+
+                    <a href="register_page.html" class="secondary-btn" id="registerLink">
+                        Create Account
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- HERO IMAGE / VISUAL DESIGN -->
+            <div class="hero-visual">
+
+                <div class="visual-card">
+                    <div class="visual-icon">✦</div>
+
+                    <!-- EDIT: Hero Card Heading -->
+                    <h2>Welcome!</h2>
+
+                    <!-- EDIT: Hero Card Description -->
+                    <p>Your journey starts here.</p>
+
+                    <div class="visual-line"></div>
+                    <div class="visual-line short"></div>
+                </div>
+
+                <!-- Decorative Elements -->
+                <div class="decor decor-one"></div>
+                <div class="decor decor-two"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             3.2 ABOUT SECTION
+        ====================================== -->
+        <section class="about section" id="about">
+
+            <!-- ABOUT SECTION HEADING -->
+            <div class="section-heading">
+
+                <p class="eyebrow">GET TO KNOW US</p>
+
+                <!-- EDIT: About Heading -->
+                <h2>
+                    About <span>Our Website</span>
+                </h2>
+
+                <!-- EDIT: About Introduction -->
+                <p>
+                    We aim to provide visitors with an accessible and
+                    user-friendly online experience. Learn more about
+                    what we offer and how our website can help you.
+                </p>
+
+            </div>
+
+
+            <!-- ABOUT INFORMATION CARDS -->
+            <div class="about-content">
+
+                <!-- ABOUT CARD 1 -->
+                <div class="about-box">
+
+                    <div class="about-icon">◎</div>
+
+                    <!-- EDIT: Purpose Title -->
+                    <h3>Our Purpose</h3>
+
+                    <!-- EDIT: Purpose Description -->
+                    <p>
+                        To provide useful information and convenient access
+                        to the services available on our website.
+                    </p>
+
+                </div>
+
+
+                <!-- ABOUT CARD 2 -->
+                <div class="about-box">
+
+                    <div class="about-icon">✧</div>
+
+                    <!-- EDIT: Goal Title -->
+                    <h3>Our Goal</h3>
+
+                    <!-- EDIT: Goal Description -->
+                    <p>
+                        To create a simple, accessible, and enjoyable
+                        experience for every visitor.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             3.3 SERVICES / FEATURES SECTION
+        ====================================== -->
+        <section class="services section" id="services">
+
+            <!-- SERVICES HEADING -->
+            <div class="section-heading">
+
+                <p class="eyebrow">WHAT WE OFFER</p>
+
+                <!-- EDIT: Services Heading -->
+                <h2>
+                    Explore Our <span>Features</span>
+                </h2>
+
+                <!-- EDIT: Services Introduction -->
+                <p>
+                    Discover the available features of our website.
+                </p>
+
+            </div>
+
+
+            <!-- SERVICES CARDS -->
+            <div class="service-grid">
+
+                <!-- SERVICE CARD 1 -->
+                <article class="service-card">
+
+                    <div class="service-icon">⌕</div>
+
+                    <!-- EDIT: Service 1 Title -->
+                    <h3>Easy Navigation</h3>
+
+                    <!-- EDIT: Service 1 Description -->
+                    <p>
+                        Find information through a simple and organized interface.
+                    </p>
+
+                </article>
+
+
+                <!-- SERVICE CARD 2 -->
+                <article class="service-card">
+
+                    <div class="service-icon">♙</div>
+
+                    <!-- EDIT: Service 2 Title -->
+                    <h3>User Accounts</h3>
+
+                    <!-- EDIT: Service 2 Description -->
+                    <p>
+                        Create an account and access your personal profile.
+                    </p>
+
+                </article>
+
+
+                <!-- SERVICE CARD 3 -->
+                <article class="service-card">
+
+                    <div class="service-icon">◇</div>
+
+                    <!-- EDIT: Service 3 Title -->
+                    <h3>User-Friendly Design</h3>
+
+                    <!-- EDIT: Service 3 Description -->
+                    <p>
+                        Enjoy a clean layout designed for different screen sizes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             3.4 CONTACT SECTION
+        ====================================== -->
+        <section class="contact section" id="contact">
+
+            <div class="contact-content">
+
+                <p class="eyebrow">GET IN TOUCH</p>
+
+                <!-- EDIT: Contact Heading -->
+                <h2>Have Questions?</h2>
+
+                <!-- EDIT: Contact Description -->
+                <p>
+                    We'd be happy to hear from you. Contact us for more
+                    information about our website.
+                </p>
+
+                <!-- EDIT: Contact Email Address -->
+                <a href="mailto:hello@example.com" class="primary-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         4. FOOTER SECTION
+    ====================================== -->
+    <footer class="footer">
+
+        <!-- EDIT: Website Name / Copyright -->
+        <p>
+            © <span id="currentYear"></span>
+            MyWebsite. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================
+         5. JAVASCRIPT FILE
+    ====================================== -->
+    <script src="index.js"></script>
+
+</body>
+</html>
