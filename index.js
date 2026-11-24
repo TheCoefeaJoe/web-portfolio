@@ -1,53 +1,121 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Check if a user is logged in
+    /* =====================================
+       1. USER LOGIN STATUS
+    ====================================== */
+
     const loggedInEmail = sessionStorage.getItem("loggedInEmail");
 
     const loginLink = document.getElementById("loginLink");
     const profileLink = document.getElementById("profileLink");
     const registerLink = document.getElementById("registerLink");
 
-    // Display the correct account links
     if (loggedInEmail) {
-        loginLink.hidden = true;
-        profileLink.hidden = false;
-        registerLink.hidden = true;
+        if (loginLink) loginLink.hidden = true;
+        if (profileLink) profileLink.hidden = false;
+        if (registerLink) registerLink.hidden = true;
     } else {
-        loginLink.hidden = false;
-        profileLink.hidden = true;
-        registerLink.hidden = false;
+        if (loginLink) loginLink.hidden = false;
+        if (profileLink) profileLink.hidden = true;
+        if (registerLink) registerLink.hidden = false;
     }
 
-    // Mobile navigation toggle
+
+    /* =====================================
+       2. MOBILE NAVIGATION
+    ====================================== */
+
     const menuToggle = document.getElementById("menuToggle");
     const navbar = document.getElementById("navbar");
 
-    menuToggle.addEventListener("click", function () {
-        navbar.classList.toggle("show");
-    });
+    if (menuToggle && navbar) {
 
-    // Close mobile navigation after clicking a link
-    document.querySelectorAll(".navbar a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            navbar.classList.remove("show");
+        menuToggle.addEventListener("click", function () {
+            navbar.classList.toggle("show");
         });
-    });
 
-    // Highlight active navigation link
+        document.querySelectorAll(".navbar a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navbar.classList.remove("show");
+            });
+        });
+    }
+
+
+    /* =====================================
+       3. ACTIVE NAVIGATION LINK
+    ====================================== */
+
     const navLinks = document.querySelectorAll(".nav-link");
 
     navLinks.forEach(function (link) {
+
         link.addEventListener("click", function () {
+
             navLinks.forEach(function (item) {
                 item.classList.remove("active");
             });
 
             this.classList.add("active");
         });
+
     });
 
-    // Automatically update footer year
-    document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
+
+    /* =====================================
+       4. HERO AUTOMATIC SLIDESHOW
+    ====================================== */
+
+    const slides = document.querySelectorAll(".hero-slideshow .slide");
+    const indicators = document.querySelectorAll(".slide-indicators .indicator");
+
+    let currentSlide = 0;
+    let slideshowTimer;
+
+    function showSlide(index) {
+
+        slides.forEach(function (slide) {
+            slide.classList.remove("active");
+        });
+
+        indicators.forEach(function (indicator) {
+            indicator.classList.remove("active");
+        });
+
+        slides[index].classList.add("active");
+
+        if (indicators[index]) {
+            indicators[index].classList.add("active");
+        }
+    }
+
+    function nextSlide() {
+
+        if (slides.length === 0) return;
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        showSlide(currentSlide);
+    }
+
+    if (slides.length > 0) {
+
+        showSlide(currentSlide);
+
+        // Change image every 4 seconds
+        slideshowTimer = setInterval(nextSlide, 4000);
+
+    }
+
+
+    /* =====================================
+       5. FOOTER YEAR
+    ====================================== */
+
+    const currentYear = document.getElementById("currentYear");
+
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
 
 });
