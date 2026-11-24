@@ -10,7 +10,9 @@
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
 }
-
+#home {
+    scroll-margin-top: 75px; /* Adjust this value based on your header height */
+}
 :root {
     --bg-color: #F3F8FF;
     --surface-color: #FFFFFF;
@@ -109,8 +111,8 @@ a {
 ========================================= */
 
 .hero {
-    min-height: 570px;
-    padding: 80px 8%;
+    min-height: 85vh; /* Makes the hero section taller */
+    padding: 110px 8%;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
@@ -122,6 +124,7 @@ a {
     );
     overflow: hidden;
 }
+
 
 .hero-content {
     max-width: 600px;
@@ -287,99 +290,143 @@ a {
     color: var(--muted-color);
 }
 
-/* =========================================
-   5. ABOUT SECTION
-========================================= */
+/* =====================================
+   ABOUT / UNDERSTANDING BSEMC
+====================================== */
 
-.about {
-    background: var(--surface-color);
+.BSEMC-section {
+    padding: 90px 8%;
+    background: #FFFFFF;
 }
 
-.about-content {
+.BSEMC-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 950px;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+    max-width: 1200px;
     margin: auto;
 }
 
-.about-box {
-    padding: 30px;
-    background: #F7FAFF;
-    border-radius: 13px;
-    border: 1px solid var(--border-color);
-    border-bottom: 3px solid var(--primary-blue);
+.BSEMC-content {
+    width: 100%;
 }
 
-.about-icon {
-    width: 50px;
-    height: 50px;
-    display: grid;
-    place-items: center;
-    background: var(--soft-blue);
-    color: var(--dark-blue);
-    border-radius: 12px;
-    border-bottom: 3px solid var(--orange);
-    font-size: 25px;
+.BSEMC-label {
+    color: #FFAD66;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.BSEMC-content h2 {
+    color: #24558A;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.BSEMC-content h2 span {
+    color: #FFAD66;
+}
+
+.BSEMC-content p:not(.BSEMC-label) {
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.9;
     margin-bottom: 18px;
+    text-align: justify;
 }
 
-.about-box h3 {
-    margin-bottom: 10px;
+.BSEMC-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(36, 85, 138, 0.12);
+}
+.BSEMC-label,
+.BSEMC-content h2 {
+    text-align: center;
 }
 
-.about-box p {
-    color: var(--muted-color);
+/* Responsive Design */
+@media (max-width: 850px) {
+    .BSEMC-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .BSEMC-content h2 {
+        font-size: 30px;
+    }
+
+    .BSEMC-image img {
+        height: 300px;
+    }
 }
 
-/* =========================================
-   6. SERVICES SECTION
-========================================= */
+/* =====================================
+   SERVICES / FEATURE CARDS
+====================================== */
 
-.services {
-    background: var(--bg-color);
-}
-
-.service-grid {
+.services-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 45px auto 0;
 }
 
 .service-card {
+    background: #FFFFFF;
     padding: 30px 25px;
-    background: var(--surface-color);
-    border-radius: 13px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 5px 20px rgba(36, 85, 138, 0.06);
-    transition: 0.3s;
+    border: 1px solid #DCE6F0;
+    border-radius: 14px;
+    transition: 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-7px);
-    border-bottom: 3px solid var(--orange);
-    box-shadow: 0 12px 25px rgba(36, 85, 138, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(36, 85, 138, 0.12);
+    border-color: #6BA5DF;
 }
 
 .service-icon {
-    width: 55px;
-    height: 55px;
-    display: grid;
-    place-items: center;
-    background: var(--soft-blue);
-    color: var(--dark-blue);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DCEBFA;
     border-radius: 12px;
-    border-bottom: 3px solid var(--orange);
-    font-size: 27px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
 .service-card h3 {
-    margin-bottom: 10px;
+    color: #24558A;
+    font-size: 19px;
+    margin-bottom: 12px;
 }
 
 .service-card p {
-    color: var(--muted-color);
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1000px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =========================================
@@ -496,4 +543,5 @@ a {
     .hero h1 {
         font-size: 39px;
     }
+
 }
